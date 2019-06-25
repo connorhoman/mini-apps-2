@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import ReactPaginate from 'react-paginate';
 
 class App extends React.Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class App extends React.Component {
                 this.setState({data: data});
             },
             error: (err) =>  {
-                console.log(err);
+                throw err;
             }
         });
     }
